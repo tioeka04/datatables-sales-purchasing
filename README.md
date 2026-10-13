@@ -3,6 +3,14 @@
 Tugas Day 13: implementasi **DataTables** dan **DataTables Extension** di Laravel 12,
 melanjutkan domain *Sales & Purchasing* dari tugas sebelumnya (master Product & Supplier).
 
+## Demo online (statis)
+
+Folder [`docs/`](docs) berisi versi statis yang bisa dicoba langsung di browser (GitHub Pages):
+**https://tioeka04.github.io/datatables-sales-purchasing/**
+
+Demo ini memakai 1.000 data dummy dari `docs/products.json` dengan DataTables sisi klien. Tambah/edit/hapus
+disimpan di `localStorage` browser, tanpa server. Versi lengkap dengan server-side processing ada di aplikasi Laravel.
+
 ## Fitur
 
 - **DataTables server-side processing** (`yajra/laravel-datatables-oracle`): paging, sorting, dan
