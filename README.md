@@ -49,6 +49,19 @@ Menjalankan test:
 php artisan test
 ```
 
+## Deploy gratis ke Render
+
+Repo sudah menyertakan `Dockerfile`, `docker-entrypoint.sh`, dan `render.yaml`.
+
+1. Buat akun di https://render.com (login dengan GitHub).
+2. **New > Web Service**, pilih repo ini, runtime **Docker**, plan **Free**.
+3. Tambahkan environment variable `APP_KEY` (hasil `php artisan key:generate --show`) dan
+   `APP_URL` (URL Render, mis. `https://datatables-sales-purchasing.onrender.com`).
+4. Deploy. Saat start, container membuat SQLite baru dan mengisi 1.000 data dummy.
+
+Catatan: pada free plan service tidur setelah ~15 menit tanpa trafik (request pertama lambat),
+dan data hasil tambah/edit/hapus kembali ke data seeder saat container restart. Cukup untuk demo.
+
 ## Catatan
 
 - Pada mode server-side, tombol export hanya mengekspor baris yang sedang dimuat di halaman.

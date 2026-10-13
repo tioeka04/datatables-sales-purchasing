@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: datatables-sales-purchasing
+    runtime: docker
+    plan: free
+    healthCheckPath: /up
+    envVars:
+      - key: APP_KEY
+        generateValue: false
+        sync: false
+      - key: APP_URL
+        sync: false
